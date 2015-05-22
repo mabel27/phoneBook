@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PhoneBook-home</title>
+
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+
+    <link href="style/phoneBook.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar  navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> <i class="fa fa-book fa-2x"></i>Phone Book</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                    <form id="logout" >
+                                <button type="submit" class="btn btn-submit">Log out</button>
+                            </form>
+                      </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+  
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1  class="subtitle page-header">
+                    Welcome to Phone Book
+                </h1>
+            </div>
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div id="panel1" class="panel-heading">
+                        <h4><i class="fa fa-fw fa-list "></i>My Contact List</h4>
+                    </div>
+                    <div class="panel-body">
+                       
+                        <div id="responsecontainer" align="center">
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                
+              <button  type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
+                Add new Contact
+              </button>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add new Contact</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" id = "new_contact" >
+                <div class="form-group">
+                    <label for="InputUser">Enter a Contact Name</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" required> 
+                        
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="InputEmail">Enter a Phone Number</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt"></span></span>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone" required>
+                        
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <label for="InputName">Enter a Date</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        <input type="date" class="form-control" name="date" id="date" placeholder="Enter Date">
+                        
+                    </div>
+                </div>
+ 				<div class="form-group">
+                    <label for="InputName">Additional Notes</label>
+                    <div class="input-group">
+                       <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                        <input type="text" class="form-control" name="note" id="note" placeholder="Enter Notes">
+                       
+                    </div>
+                </div>
+               
+      <div class="modal-footer">
+        
+        <input type="submit" name="Save" class="btn btn-primary">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>   
+         </form>
+    </div>
+  </div>
+</div>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="js/new_contact.js"></script>
+  <script src="js/show_contact.js"></script>
+  <script src="js/delete_contact.js"></script>
+  <script src="js/logout.js"></script>
+ 
+  </body>
+</html>
+  
+
